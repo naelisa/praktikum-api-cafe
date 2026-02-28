@@ -1,0 +1,24 @@
+<?php
+header("Content-Type: application/json");
+
+include_once '../config/Database.php';
+include_once '../models/Menu.php';
+
+$database = new Database();
+$db = $database->getConnection();
+$menu = new Menu($db);
+
+$data = json_decode(file_get_contents("php://input"));
+
+$menu->id = $data->id;
+$menu->nama_menu = $data->nama_menu;
+$menu->kategori = $data->kategori;
+$menu->harga = $data->harga;
+$menu->stok = $data->stok;
+
+if ($menu->update()) {
+    echo json_encode(["message" => "Menu berhasil diperbarui"]);
+} else {
+    echo json_encode(["message" => "Gagal memperbarui menu"]);
+}
+?>
