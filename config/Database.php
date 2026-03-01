@@ -1,9 +1,8 @@
+<?php
 /*
 NAMA : Serli Nadia A.
 NPM : 247006111080
 */
-
-<?php
 class Database {
     private $host = "localhost";
     private $db_name = "cafe";

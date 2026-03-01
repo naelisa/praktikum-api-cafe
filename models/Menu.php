@@ -1,9 +1,8 @@
+<?php
 /*
 NAMA : Serli Nadia A.
 NPM : 247006111080
 */
-
-<?php
 class Menu {
     private $conn;
     private $table_name = "menu";

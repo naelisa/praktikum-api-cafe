@@ -1,9 +1,8 @@
+<?php
 /*
 NAMA : Serli Nadia A.
 NPM : 247006111080
 */
-
-<?php
 header("Content-Type: application/json");
 
 include_once '../config/Database.php';
