@@ -15,5 +15,5 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $data[] = $row;
 }
 
-echo json_encode($data);
+echo json_encode($data, JSON_PRETTY_PRINT);
 ?>
